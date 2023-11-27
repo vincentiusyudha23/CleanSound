@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="string_array_music">
+        <item>Blinding Lights</item>
+        <item>Peaches</item>
+        <item>Levitating</item>
+        <item>Save Your Tears</item>
+        <item>Good 4 U</item>
+        <item>Penjaga Hati</item>
+        <item>Kiss Me More</item>
+        <item>Rindu Sahabat</item>
+        <item>Jajalen Aku</item>
+        <item>Tak Kan Hilang</item>
+    </string-array>
+</resources>
