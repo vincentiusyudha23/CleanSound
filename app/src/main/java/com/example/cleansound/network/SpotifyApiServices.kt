@@ -2,6 +2,7 @@ package com.example.cleansound.network
 
 import com.example.cleansound.Model.ResponseMusic
 import com.example.cleansound.Model.ResponseSpotify
+import com.example.cleansound.Model.ResponseUserSpotify
 import com.example.cleansound.Model.Track
 import retrofit2.Response
 import retrofit2.http.GET
@@ -21,4 +22,9 @@ interface SpotifyApiServices {
         @Query("q") query: String,
         @Header("Authorization") token: String
     ): Response<ResponseMusic>
+
+    @GET("v1/me")
+    suspend fun getUserSpotifyData(
+        @Header("Authorization") token: String
+    ): Response<ResponseUserSpotify>
 }

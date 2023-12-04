@@ -1,17 +1,14 @@
 package com.example.cleansound.ui.home
 
 import android.util.Log
-import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.cleansound.Model.ItemsItem
 import com.example.cleansound.Model.ItemsItemMusic
-import com.example.cleansound.Model.SongModel
 import com.example.cleansound.network.SpotifyApiConfig
 import kotlinx.coroutines.launch
-import okhttp3.ResponseBody
 
 class HomeViewModel : ViewModel() {
 

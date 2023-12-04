@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "943622296047",
+    "project_id": "cleansound-5ba83",
+    "storage_bucket": "cleansound-5ba83.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:943622296047:android:0e8a7ffd7f028f6710a61a",
+        "android_client_info": {
+          "package_name": "com.example.cleansound"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKUz1_Fbfglsvl-9yObLQF0tgBnsczGnw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

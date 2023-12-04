@@ -35,7 +35,7 @@ class SplashScreen : AppCompatActivity() {
         Handler(Looper.getMainLooper()).removeCallbacksAndMessages(null)
         Handler(Looper.getMainLooper()).postDelayed({
             val builder = AuthorizationRequest.Builder(CLIENT_ID, AuthorizationResponse.Type.TOKEN, REDIRECT_URI)
-            builder.setScopes(arrayOf("streaming"))
+            builder.setScopes(arrayOf("user-read-private", "user-read-email","streaming"))
             val request: AuthorizationRequest = builder.build()
 
 //            AuthorizationClient.openLoginActivity(this, REQUEST_CODE, request)
@@ -82,24 +82,24 @@ override fun onNewIntent(intent: Intent) {
         val response: AuthorizationResponse = AuthorizationResponse.fromUri(uri)
 
         when (response.type) {
-            // Response was successful and contains auth token
+
             AuthorizationResponse.Type.TOKEN -> {
                 val accessToken = response.accessToken
                 val mainIntent = Intent(this, LoginActivity::class.java)
                    (application as MyApplication).accessToken = accessToken
+                    Log.d("AccessToken", accessToken)
                     startActivity(mainIntent)
                     finish()
             }
 
-            // Auth flow returned an error
+
             AuthorizationResponse.Type.ERROR -> {
                 val error = response.error
                 showToast("Authrization Errorr: $error")
             }
 
-            // Most likely auth flow was cancelled
             else -> {
-                // Handle other cases
+                // Kosong
             }
         }
     }
