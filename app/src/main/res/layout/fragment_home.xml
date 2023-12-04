@@ -4,13 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.home.HomeFragment">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/sr_music"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:iconifiedByDefault="false"
+        app:queryHint="@string/title_searchview"
+        android:background="@drawable/sr_box"
+        app:layout_constraintTop_toTopOf="parent"
+         />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_music"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="65dp"
-        tools:listitem="@layout/item_list_music"
-        />
+        android:layout_marginVertical="60dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/item_list_music" />
 </androidx.constraintlayout.widget.ConstraintLayout>

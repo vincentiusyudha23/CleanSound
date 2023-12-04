@@ -11,4 +11,5 @@
     <color name="blue">#2F88FF</color>
     <color name="baby_blue">#60A4FF</color>
     <color name="whiteBlue2">#A8C9F4</color>
+    <color name="transparent">#00FF0000</color>
 </resources>

@@ -2,25 +2,13 @@ package com.example.cleansound.Model
 
 import com.google.gson.annotations.SerializedName
 
-data class ResponseSpotify(
+data class ResponseMusic(
 
 	@field:SerializedName("tracks")
-	val tracks: Tracks? = null
+	val tracks: TracksMusic? = null
 )
 
-data class Tracks(
-
-	@field:SerializedName("items")
-	val items: List<ItemsItem?>? = null
-)
-
-data class ExternalUrls(
-
-	@field:SerializedName("spotify")
-	val spotify: String? = null
-)
-
-data class ImagesItem(
+data class ImagesItemMusic(
 
 	@field:SerializedName("width")
 	val width: Int? = null,
@@ -32,55 +20,19 @@ data class ImagesItem(
 	val height: Int? = null
 )
 
-data class ArtistsItem(
+data class ExternalIdsMusic(
 
-	@field:SerializedName("name")
-	val name: String? = null,
-
-	@field:SerializedName("href")
-	val href: String? = null,
-
-	@field:SerializedName("id")
-	val id: String? = null,
-
-	@field:SerializedName("type")
-	val type: String? = null,
-
-	@field:SerializedName("external_urls")
-	val externalUrls: ExternalUrls? = null,
-
-	@field:SerializedName("uri")
-	val uri: String? = null
+	@field:SerializedName("isrc")
+	val isrc: String? = null
 )
 
-data class LinkedFrom(
-
-	@field:SerializedName("href")
-	val href: String? = null,
-
-	@field:SerializedName("id")
-	val id: String? = null,
-
-	@field:SerializedName("type")
-	val type: String? = null,
-
-	@field:SerializedName("external_urls")
-	val externalUrls: ExternalUrls? = null,
-
-	@field:SerializedName("uri")
-	val uri: String? = null
-)
-
-data class Track(
+data class ItemsItemMusic(
 
 	@field:SerializedName("disc_number")
 	val discNumber: Int? = null,
 
 	@field:SerializedName("album")
 	val album: Album? = null,
-
-	@field:SerializedName("episode")
-	val episode: Boolean? = null,
 
 	@field:SerializedName("type")
 	val type: String? = null,
@@ -124,29 +76,11 @@ data class Track(
 	@field:SerializedName("is_local")
 	val isLocal: Boolean? = null,
 
-	@field:SerializedName("track")
-	val track: Boolean? = null,
-
 	@field:SerializedName("external_urls")
-	val externalUrls: ExternalUrls? = null,
-
-	@field:SerializedName("linked_from")
-	val linkedFrom: LinkedFrom? = null
+	val externalUrls: ExternalUrls? = null
 )
 
-data class ExternalIds(
-
-	@field:SerializedName("isrc")
-	val isrc: String? = null
-)
-
-data class ItemsItem(
-
-	@field:SerializedName("track")
-	val track: Track? = null
-)
-
-data class Album(
+data class AlbumMusic(
 
 	@field:SerializedName("images")
 	val images: List<ImagesItem?>? = null,
@@ -186,4 +120,55 @@ data class Album(
 
 	@field:SerializedName("external_urls")
 	val externalUrls: ExternalUrls? = null
+)
+
+data class TracksMusic(
+
+	@field:SerializedName("next")
+	val next: String? = null,
+
+	@field:SerializedName("total")
+	val total: Int? = null,
+
+	@field:SerializedName("offset")
+	val offset: Int? = null,
+
+	@field:SerializedName("previous")
+	val previous: Any? = null,
+
+	@field:SerializedName("limit")
+	val limit: Int? = null,
+
+	@field:SerializedName("href")
+	val href: String? = null,
+
+	@field:SerializedName("items")
+	val items: List<ItemsItemMusic?>? = null
+)
+
+data class ArtistsItemMusic(
+
+	@field:SerializedName("name")
+	val name: String? = null,
+
+	@field:SerializedName("href")
+	val href: String? = null,
+
+	@field:SerializedName("id")
+	val id: String? = null,
+
+	@field:SerializedName("type")
+	val type: String? = null,
+
+	@field:SerializedName("external_urls")
+	val externalUrls: ExternalUrls? = null,
+
+	@field:SerializedName("uri")
+	val uri: String? = null
+)
+
+data class ExternalUrlsMusic(
+
+	@field:SerializedName("spotify")
+	val spotify: String? = null
 )

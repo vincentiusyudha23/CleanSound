@@ -3,4 +3,7 @@
     <string name="title_home">Home</string>
     <string name="title_favorite">Favorite</string>
     <string name="title_profile">Profile</string>
+    <string name="title_searchview">Search Any Song</string>
+    <string name="text_register">Register</string>
+    <string name="text_login">Login</string>
 </resources>
